@@ -32,7 +32,7 @@ class RequestController extends Controller
              ]);*/
 
 
-
+        error_log($request->input('areaId'));
         $table=new orderRequest();
         $table->expectedOrganicQuantity=$request->input('v1');
         $table->expectedPlasticQuantity=$request->input('v2');
@@ -40,11 +40,12 @@ class RequestController extends Controller
         $table->expectedGlassQuantity=$request->input('v4');
         $table->expectedMetalQuantity=$request->input('v5');
         $table->expectedElectronicQuantity=$request->input('v6');
+        $table->areaId=$request->input('areaId');
         $table->requestedDate=$cDate;
         $table->state=1;
         $table->uId=$request->input('uId');
         $table->save();
-        error_log($table);
+
         return response()->json([
             'error'=>false,
             'message'=>"Success!"

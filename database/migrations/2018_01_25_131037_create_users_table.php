@@ -23,6 +23,7 @@ class CreateUsersTable extends Migration
             $table->string('address');
             $table->string('Lplace');
             $table->string('mobileno');
+            $table->integer('areaId');
         });
     }
 

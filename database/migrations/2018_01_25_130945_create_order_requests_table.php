@@ -25,19 +25,21 @@ class CreateOrderRequestsTable extends Migration
             $table->string('state');
             $table->integer('uId');
 
-            $table->integer('realOrganicQuantity');
-            $table->integer('realPlasticQuantity');
-            $table->integer('realPaperQuantity');
-            $table->integer('realGlassQuantity');
-            $table->integer('realMetalQuantity');
-            $table->integer('realElectronicQuantity');
+            $table->double('realOrganicQuantity');
+            $table->double('realPlasticQuantity');
+            $table->double('realPaperQuantity');
+            $table->double('realGlassQuantity');
+            $table->double('realMetalQuantity');
+            $table->double('realElectronicQuantity');
 
-            $table->integer('expectedOrganicQuantity');
-            $table->integer('expectedPlasticQuantity');
-            $table->integer('expectedPaperQuantity');
-            $table->integer('expectedGlassQuantity');
-            $table->integer('expectedMetalQuantity');
-            $table->integer('expectedElectronicQuantity');
+            $table->double('expectedOrganicQuantity');
+            $table->double('expectedPlasticQuantity');
+            $table->double('expectedPaperQuantity');
+            $table->double('expectedGlassQuantity');
+            $table->double('expectedMetalQuantity');
+            $table->double('expectedElectronicQuantity');
+
+            $table->integer('areaId');
 
         });
 
